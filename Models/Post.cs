@@ -1,5 +1,5 @@
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace Blog.Models
 {
@@ -12,9 +12,9 @@ namespace Blog.Models
         public string Slug { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime LastUpdateDate { get; set; }
-        public int CategoryId { get; set; }
         public Category Category { get; set; }
-        public int AuthorId { get; set; }
         public User Author { get; set; }
+
+        public IList<Tag> Tags { get; set; }
     }
 }
