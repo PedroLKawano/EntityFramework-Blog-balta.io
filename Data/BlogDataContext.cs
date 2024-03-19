@@ -11,7 +11,7 @@ namespace Blog.Data
         public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlServer("localhost,1433;Database=Blog;User ID=sa;Password=");
+            => options.UseSqlServer("Server=localhost,1433;Database=Blog;User ID=sa;Password=");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
